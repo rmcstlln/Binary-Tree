@@ -50,6 +50,12 @@ class BinarySearchTreeNode:
             else:
                 return False
 
+    # 1. Find Minimum Element (Exercise)
+    def find_min(self):
+        if self.left is None:
+            return self.data
+        return self.left.find_min()
+
 
 def build_tree(elements):
     root = BinarySearchTreeNode(elements[0])
@@ -75,3 +81,10 @@ if __name__ == '__main__':
 
     print("Uk is in the list? ", country_tree.search("UK"))
     print("Sweden is in the list? ", country_tree.search("Sweden"))
+
+    # Example 4
+    print(country_tree.in_order_traversal())
+
+    # Running Exercises
+    print("The Mininum Element is :", numbers_tree.find_min())
+
