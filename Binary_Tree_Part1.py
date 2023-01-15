@@ -129,3 +129,12 @@ if __name__ == '__main__':
     print("The Sum of all Elements is:", numbers_tree.calculate_sum())
     print("Post Order Traversal:", numbers_tree.post_order_traversal())
     print("Pre Order Traversal:", numbers_tree.pre_order_traversal())
+
+    # Demo using the letters of my fullname as the content of the binary tree
+    full_name = ["R", "O", "M", "A", "R", "K", "C", "P", "I", "Ñ", "E", "R", "O"]
+    name_tree = build_tree(full_name)
+    print("Is letter A in the list?", name_tree.search("A"))
+    print("Pre Order Traversal of the list:", name_tree.pre_order_traversal())
+    print("In Order Traversal list of Full Name:", name_tree.in_order_traversal())
+    print("Post Order Traversal of the list:", name_tree.post_order_traversal())
+    # Can't Use Minimum, Maximum, and Sum as the content of Binary Tree are strings
