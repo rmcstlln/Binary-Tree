@@ -69,4 +69,9 @@ if __name__ == '__main__':
     # Example 2
     print(numbers_tree.search(20))
 
+    # Example 3
+    countries = ["India", "Pakistan", "Germany", "USA", "China", "India", "UK", "USA"]
+    country_tree = build_tree(countries)
 
+    print("Uk is in the list? ", country_tree.search("UK"))
+    print("Sweden is in the list? ", country_tree.search("Sweden"))
