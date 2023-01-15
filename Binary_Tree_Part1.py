@@ -65,3 +65,8 @@ if __name__ == '__main__':
     numbers = [17, 4, 1, 20, 9, 23, 18, 34]
     numbers_tree = build_tree(numbers)
     print(numbers_tree.in_order_traversal())
+
+    # Example 2
+    print(numbers_tree.search(20))
+
+
