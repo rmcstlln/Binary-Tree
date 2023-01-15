@@ -82,6 +82,18 @@ class BinarySearchTreeNode:
 
         return elements
 
+    # 5. Performs Pre Order Traversal (Exercise)
+    def pre_order_traversal(self):
+        elements = [self.data]
+
+        if self.left:
+            elements += self.left.pre_order_traversal()
+
+        if self.right:
+            elements += self.right.pre_order_traversal()
+
+        return elements
+
 
 def build_tree(elements):
     root = BinarySearchTreeNode(elements[0])
@@ -116,4 +128,4 @@ if __name__ == '__main__':
     print("The Maximum Element is:", numbers_tree.find_max())
     print("The Sum of all Elements is:", numbers_tree.calculate_sum())
     print("Post Order Traversal:", numbers_tree.post_order_traversal())
-
+    print("Pre Order Traversal:", numbers_tree.pre_order_traversal())
